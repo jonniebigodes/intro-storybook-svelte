@@ -63,7 +63,8 @@
 <!--code for data section-->
 <script>
   import PureTaskList from './PureTaskList.svelte';
-  import {store} from '../store'; // rename the name of the variable
+  /* import {store} from '../store';  */
+  import {taskStore} from '../store'; 
   function onPinTask(event) {
     console.log(`tasklist pin task:${event.detail.id}`);
     store.archiveTask(event.detail.id)
@@ -76,6 +77,8 @@
 </script>
 
 <div>
-  <PureTaskList tasks={$store} on:onPinTask={onPinTask} on:onArchiveTask={onArchiveTask}/>
+  <!-- code for data section
+  <PureTaskList tasks={$store} on:onPinTask={onPinTask} on:onArchiveTask={onArchiveTask}/>-->
+  <PureTaskList tasks={$taskStore} on:onPinTask={onPinTask} on:onArchiveTask={onArchiveTask}/>
 </div>
 <!---->

@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/300b052e-e553-4261-8774-40d5b1390584/deploy-status)](https://app.netlify.com/sites/jonniebigodes-storybook-svelte/deploys)
+
 *Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
@@ -65,3 +67,4 @@ If you want to run the tests without cache just run the following command:
 ```bash
 npm run jest-without-cache
 ```
+
