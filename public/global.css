@@ -170,19 +170,19 @@
  }
  @keyframes spin {
    0% {
-     transform: rotate(0deg);
+	 transform: rotate(0deg);
    }
    100% {
-     transform: rotate(359deg);
+	 transform: rotate(359deg);
    }
  }
  @keyframes glow {
    0%,
    100% {
-     opacity: 1;
+	 opacity: 1;
    }
    50% {
-     opacity: 0.5;
+	 opacity: 0.5;
    }
  }
  .force-wrap {
@@ -971,7 +971,7 @@
  }
  @media screen and (min-width: 40em) {
    .page.lists-show nav {
-     text-align: left;
+	 text-align: left;
    }
  }
  .page.lists-show nav .title-page {

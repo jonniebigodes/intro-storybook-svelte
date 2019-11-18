@@ -20,7 +20,7 @@ import PureTaskList from "./PureTaskList.svelte";
 import {render} from '@testing-library/svelte';
 import { withPinnedTasks } from './PureTaskList.stories';
 
-describe("TaskList",()=>{
+/* describe("TaskList",()=>{
     it('renders pinned tasks at the start of the list',()=>{
         setTimeout(() => {
             const {container}= render(PureTaskList,{
@@ -31,5 +31,15 @@ describe("TaskList",()=>{
             expect(container.firstChild.classList.contains('TASK_PINNED')).toBe(true)
         }, 10);
     })
-})
+}) */
+
+test("TaskList ", async () => {
+  const { container } = await render(PureTaskList, {
+    props: {
+      tasks: withPinnedTasks
+    }
+  });
+  expect(container.firstChild.children[0].classList.contains('TASK_PINNED')).toBe(true);
+});
+
 //
