@@ -12,9 +12,7 @@
   <div class="list-items">loading</div>
 {/if}
 
-{#if emptyTasks}
-  <div class="list-items">empty</div>
-{/if}
+
 
 
 {#each tasks as task}
@@ -67,12 +65,12 @@
   import {taskStore} from '../store'; 
   function onPinTask(event) {
     console.log(`tasklist pin task:${event.detail.id}`);
-    store.archiveTask(event.detail.id)
+    taskStore.pinTask(event.detail.id)
     
   }
   function onArchiveTask(event) {
     console.log(`tasklist archive task:${event.detail.id}`);
-    store.pinTask(event.detail.id)
+    taskStore.archiveTask(event.detail.id)
   }
 </script>
 

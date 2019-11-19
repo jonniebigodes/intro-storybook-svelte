@@ -9,6 +9,7 @@
     ...tasks.filter(t => t.state === "TASK_PINNED"),
     ...tasks.filter(t => t.state !== "TASK_PINNED")
   ];
+
 </script>
 
 {#if loading}
@@ -21,7 +22,7 @@
   </div>
 {/if}
 
-{#if tasks.length === 0 && !loading}
+{#if noTasks && !loading}
   <div class="list-items">
     <div class="wrapper-message">
       <span class="icon-check" />

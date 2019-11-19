@@ -43,25 +43,13 @@ const TaskBox = () => {
   return {
     subscribe,
     archiveTask: id =>
-      update(tasks => {
-        tasks.map(task =>
-          task.id === id ? { ...task, state: "TASK_ARCHIVED" } : task
-        );
-        console.log(
-          `store archive task=>${JSON.stringify(tasks, null, 2)} id:${id}`
-        );
-        return tasks;
-      }),
+      update(tasks => tasks.map(task =>
+        task.id === id ? { ...task, state: "TASK_ARCHIVED" } : task
+      )),
     pinTask: id =>
-      update(tasks => {
-        tasks.map(task =>
-          task.id === id ? { ...task, state: "TASK_PINNED" } : task
-        );
-        console.log(
-          `store pin task=>${JSON.stringify(tasks, null, 2)} id:${id}`
-        );
-        return tasks;
-      })
+      update(tasks =>  tasks.map(task =>
+        task.id === id ? { ...task, state: "TASK_PINNED" } : task
+      ))
   };
 };
 export const taskStore = TaskBox();

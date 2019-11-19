@@ -1,3 +1,4 @@
+//#region old_format
 /* import { storiesOf } from "@storybook/svelte";
 import { action} from "@storybook/addon-actions";
 
@@ -207,7 +208,7 @@ storiesOf("Task", module)
  */
 
  //final code
- import { storiesOf } from "@storybook/svelte";
+import { storiesOf } from "@storybook/svelte";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, object } from "@storybook/addon-knobs";
 import Task from "./Task.svelte";
@@ -283,3 +284,4 @@ storiesOf("Task", module)
       }
     };
   });
+//#endregion

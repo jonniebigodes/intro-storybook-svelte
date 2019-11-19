@@ -441,25 +441,13 @@ var app = (function () {
       return {
         subscribe,
         archiveTask: id =>
-          update(tasks => {
-            tasks.map(task =>
-              task.id === id ? { ...task, state: "TASK_ARCHIVED" } : task
-            );
-            console.log(
-              `store archive task=>${JSON.stringify(tasks, null, 2)} id:${id}`
-            );
-            return tasks;
-          }),
+          update(tasks => tasks.map(task =>
+            task.id === id ? { ...task, state: "TASK_ARCHIVED" } : task
+          )),
         pinTask: id =>
-          update(tasks => {
-            tasks.map(task =>
-              task.id === id ? { ...task, state: "TASK_PINNED" } : task
-            );
-            console.log(
-              `store pin task=>${JSON.stringify(tasks, null, 2)} id:${id}`
-            );
-            return tasks;
-          })
+          update(tasks =>  tasks.map(task =>
+            task.id === id ? { ...task, state: "TASK_PINNED" } : task
+          ))
       };
     };
     const taskStore = TaskBox();
@@ -761,7 +749,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (14:0) {#if loading}
+    // (15:0) {#if loading}
     function create_if_block_1(ctx) {
     	var div, t0, t1, t2, t3, current;
 
@@ -788,7 +776,7 @@ var app = (function () {
     			t3 = space();
     			loadingrow4.$$.fragment.c();
     			attr_dev(div, "class", "list-items");
-    			add_location(div, file$2, 14, 2, 406);
+    			add_location(div, file$2, 15, 2, 408);
     		},
 
     		m: function mount(target, anchor) {
@@ -845,11 +833,11 @@ var app = (function () {
     			destroy_component(loadingrow4);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1.name, type: "if", source: "(14:0) {#if loading}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1.name, type: "if", source: "(15:0) {#if loading}", ctx });
     	return block;
     }
 
-    // (24:0) {#if tasks.length === 0 && !loading}
+    // (25:0) {#if noTasks && !loading}
     function create_if_block$1(ctx) {
     	var div3, div2, span, t0, div0, t2, div1;
 
@@ -865,15 +853,15 @@ var app = (function () {
     			div1 = element("div");
     			div1.textContent = "Sit back and relax";
     			attr_dev(span, "class", "icon-check");
-    			add_location(span, file$2, 26, 6, 658);
+    			add_location(span, file$2, 27, 6, 649);
     			attr_dev(div0, "class", "title-message");
-    			add_location(div0, file$2, 27, 6, 693);
+    			add_location(div0, file$2, 28, 6, 684);
     			attr_dev(div1, "class", "subtitle-message");
-    			add_location(div1, file$2, 28, 6, 751);
+    			add_location(div1, file$2, 29, 6, 742);
     			attr_dev(div2, "class", "wrapper-message");
-    			add_location(div2, file$2, 25, 4, 621);
+    			add_location(div2, file$2, 26, 4, 612);
     			attr_dev(div3, "class", "list-items");
-    			add_location(div3, file$2, 24, 2, 591);
+    			add_location(div3, file$2, 25, 2, 582);
     		},
 
     		m: function mount(target, anchor) {
@@ -892,11 +880,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$1.name, type: "if", source: "(24:0) {#if tasks.length === 0 && !loading}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$1.name, type: "if", source: "(25:0) {#if noTasks && !loading}", ctx });
     	return block;
     }
 
-    // (34:0) {#each tasksInOrder as task}
+    // (35:0) {#each tasksInOrder as task}
     function create_each_block(ctx) {
     	var current;
 
@@ -939,7 +927,7 @@ var app = (function () {
     			destroy_component(task, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(34:0) {#each tasksInOrder as task}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(35:0) {#each tasksInOrder as task}", ctx });
     	return block;
     }
 
@@ -948,7 +936,7 @@ var app = (function () {
 
     	var if_block0 = (ctx.loading) && create_if_block_1(ctx);
 
-    	var if_block1 = (ctx.tasks.length === 0 && !ctx.loading) && create_if_block$1(ctx);
+    	var if_block1 = (ctx.noTasks && !ctx.loading) && create_if_block$1(ctx);
 
     	let each_value = ctx.tasksInOrder;
 
@@ -1010,7 +998,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (ctx.tasks.length === 0 && !ctx.loading) {
+    			if (ctx.noTasks && !ctx.loading) {
     				if (!if_block1) {
     					if_block1 = create_if_block$1(ctx);
     					if_block1.c();
@@ -1122,7 +1110,7 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ('loading' in $$props) $$invalidate('loading', loading = $$props.loading);
     		if ('tasks' in $$props) $$invalidate('tasks', tasks = $$props.tasks);
-    		if ('noTasks' in $$props) noTasks = $$props.noTasks;
+    		if ('noTasks' in $$props) $$invalidate('noTasks', noTasks = $$props.noTasks);
     		if ('emptyTasks' in $$props) emptyTasks = $$props.emptyTasks;
     		if ('tasksInOrder' in $$props) $$invalidate('tasksInOrder', tasksInOrder = $$props.tasksInOrder);
     	};
@@ -1130,7 +1118,7 @@ var app = (function () {
     	let noTasks, emptyTasks, tasksInOrder;
 
     	$$self.$$.update = ($$dirty = { tasks: 1, loading: 1 }) => {
-    		if ($$dirty.tasks) { noTasks = tasks.length === 0; }
+    		if ($$dirty.tasks) { $$invalidate('noTasks', noTasks = tasks.length === 0); }
     		if ($$dirty.tasks || $$dirty.loading) { emptyTasks = tasks.length === 0 && !loading; }
     		if ($$dirty.tasks) { $$invalidate('tasksInOrder', tasksInOrder = [
             ...tasks.filter(t => t.state === "TASK_PINNED"),
@@ -1141,6 +1129,7 @@ var app = (function () {
     	return {
     		loading,
     		tasks,
+    		noTasks,
     		tasksInOrder,
     		onPinTask_handler,
     		onArchiveTask_handler
@@ -1189,7 +1178,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			puretasklist.$$.fragment.c();
-    			add_location(div, file$3, 78, 0, 1887);
+    			add_location(div, file$3, 76, 0, 1833);
     		},
 
     		l: function claim(nodes) {
@@ -1234,13 +1223,13 @@ var app = (function () {
 
     function onPinTask(event) {
       console.log(`tasklist pin task:${event.detail.id}`);
-      store.archiveTask(event.detail.id);
+      taskStore.pinTask(event.detail.id);
       
     }
 
     function onArchiveTask(event) {
       console.log(`tasklist archive task:${event.detail.id}`);
-      store.pinTask(event.detail.id);
+      taskStore.archiveTask(event.detail.id);
     }
 
     function instance$2($$self, $$props, $$invalidate) {
