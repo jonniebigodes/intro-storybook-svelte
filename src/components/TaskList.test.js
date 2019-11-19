@@ -18,7 +18,7 @@ describe("TaskList", () => {
 // update code for data section
 import PureTaskList from "./PureTaskList.svelte";
 import {render} from '@testing-library/svelte';
-import { withPinnedTasks } from './PureTaskList.stories';
+import { withPinnedTasks } from './storybook-helper'
 
 /* describe("TaskList",()=>{
     it('renders pinned tasks at the start of the list',()=>{

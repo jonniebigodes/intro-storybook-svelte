@@ -64,7 +64,7 @@ storiesOf("TaskList", module)
 
 // updated code for data section
 
-import { storiesOf } from "@storybook/svelte";
+/* import { storiesOf } from "@storybook/svelte";
 
 import PureTaskList from "./PureTaskList.svelte";
 import { task, actions } from "./Task.stories";
@@ -124,9 +124,81 @@ storiesOf("PureTaskList", module)
         ...actions
       }
     };
-  });
+  }); */
 //#endregion
 
 //#region csf
+/* import TaskList from "./TaskList.svelte";
+import { actions, defaultTasks, withPinnedTasks } from "./storybook-helper";
+export default {
+  title: "TaskList"
+};
 
+// default TaskList state
+export const standard = () => ({
+  Component: TaskList,
+  props: {
+    tasks: defaultTasks
+  },
+  on: {
+    ...actions
+  }
+});
+
+export const pinnedTasks = () => ({
+  Component: TaskList,
+  props: {
+    tasks: withPinnedTasks
+  },
+  on: {
+    ...actions
+  }
+});
+export const loading = () => ({
+  Component: TaskList,
+  props: {
+    loading: true
+  },
+});
+export const empty = () => ({
+  Component: TaskList,
+}); */
+
+// updated code for data section
+import PureTaskList from "./PureTaskList.svelte";
+import { actions, defaultTasks, withPinnedTasks } from "./storybook-helper";
+export default {
+  title: "PureTaskList"
+};
+
+// default TaskList state
+export const standard = () => ({
+  Component: PureTaskList,
+  props: {
+    tasks: defaultTasks
+  },
+  on: {
+    ...actions
+  }
+});
+
+export const pinnedTasks = () => ({
+  Component: PureTaskList,
+  props: {
+    tasks: withPinnedTasks
+  },
+  on: {
+    ...actions
+  }
+});
+export const loading = () => ({
+  Component: PureTaskList,
+  props: {
+    loading: true
+  },
+});
+export const empty = () => ({
+  Component: PureTaskList,
+});
+//
 //#endregion

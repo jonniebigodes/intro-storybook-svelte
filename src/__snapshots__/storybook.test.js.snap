@@ -222,257 +222,7 @@ exports[`Storyshots PureInboxScreen Standard 1`] = `
 </section>
 `;
 
-exports[`Storyshots PureTaskList default 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-   
-   
-  <div
-    class="list-item Task_INBOX"
-  >
-    <label
-      class="checkbox"
-    >
-      <input
-        disabled=""
-        name="checked"
-        type="checkbox"
-      />
-       
-      <span
-        class="checkbox-custom"
-      />
-    </label>
-     
-    <div
-      class="title"
-    >
-      <input
-        placeholder="Input title"
-        readonly=""
-        style="text-overflow: ellipsis;"
-        type="text"
-      />
-    </div>
-     
-    <div
-      class="actions"
-    >
-      <a
-        href="/"
-      >
-        <span
-          class="icon-star"
-        />
-      </a>
-    </div>
-  </div>
-  <div
-    class="list-item Task_INBOX"
-  >
-    <label
-      class="checkbox"
-    >
-      <input
-        disabled=""
-        name="checked"
-        type="checkbox"
-      />
-       
-      <span
-        class="checkbox-custom"
-      />
-    </label>
-     
-    <div
-      class="title"
-    >
-      <input
-        placeholder="Input title"
-        readonly=""
-        style="text-overflow: ellipsis;"
-        type="text"
-      />
-    </div>
-     
-    <div
-      class="actions"
-    >
-      <a
-        href="/"
-      >
-        <span
-          class="icon-star"
-        />
-      </a>
-    </div>
-  </div>
-  <div
-    class="list-item Task_INBOX"
-  >
-    <label
-      class="checkbox"
-    >
-      <input
-        disabled=""
-        name="checked"
-        type="checkbox"
-      />
-       
-      <span
-        class="checkbox-custom"
-      />
-    </label>
-     
-    <div
-      class="title"
-    >
-      <input
-        placeholder="Input title"
-        readonly=""
-        style="text-overflow: ellipsis;"
-        type="text"
-      />
-    </div>
-     
-    <div
-      class="actions"
-    >
-      <a
-        href="/"
-      >
-        <span
-          class="icon-star"
-        />
-      </a>
-    </div>
-  </div>
-  <div
-    class="list-item Task_INBOX"
-  >
-    <label
-      class="checkbox"
-    >
-      <input
-        disabled=""
-        name="checked"
-        type="checkbox"
-      />
-       
-      <span
-        class="checkbox-custom"
-      />
-    </label>
-     
-    <div
-      class="title"
-    >
-      <input
-        placeholder="Input title"
-        readonly=""
-        style="text-overflow: ellipsis;"
-        type="text"
-      />
-    </div>
-     
-    <div
-      class="actions"
-    >
-      <a
-        href="/"
-      >
-        <span
-          class="icon-star"
-        />
-      </a>
-    </div>
-  </div>
-  <div
-    class="list-item Task_INBOX"
-  >
-    <label
-      class="checkbox"
-    >
-      <input
-        disabled=""
-        name="checked"
-        type="checkbox"
-      />
-       
-      <span
-        class="checkbox-custom"
-      />
-    </label>
-     
-    <div
-      class="title"
-    >
-      <input
-        placeholder="Input title"
-        readonly=""
-        style="text-overflow: ellipsis;"
-        type="text"
-      />
-    </div>
-     
-    <div
-      class="actions"
-    >
-      <a
-        href="/"
-      >
-        <span
-          class="icon-star"
-        />
-      </a>
-    </div>
-  </div>
-  <div
-    class="list-item Task_INBOX"
-  >
-    <label
-      class="checkbox"
-    >
-      <input
-        disabled=""
-        name="checked"
-        type="checkbox"
-      />
-       
-      <span
-        class="checkbox-custom"
-      />
-    </label>
-     
-    <div
-      class="title"
-    >
-      <input
-        placeholder="Input title"
-        readonly=""
-        style="text-overflow: ellipsis;"
-        type="text"
-      />
-    </div>
-     
-    <div
-      class="actions"
-    >
-      <a
-        href="/"
-      >
-        <span
-          class="icon-star"
-        />
-      </a>
-    </div>
-  </div>
-  
-</section>
-`;
-
-exports[`Storyshots PureTaskList empty 1`] = `
+exports[`Storyshots PureTaskList Empty 1`] = `
 <section
   class="storybook-snapshot-container"
 >
@@ -505,7 +255,7 @@ exports[`Storyshots PureTaskList empty 1`] = `
 </section>
 `;
 
-exports[`Storyshots PureTaskList loading 1`] = `
+exports[`Storyshots PureTaskList Loading 1`] = `
 <section
   class="storybook-snapshot-container"
 >
@@ -638,7 +388,7 @@ exports[`Storyshots PureTaskList loading 1`] = `
 </section>
 `;
 
-exports[`Storyshots PureTaskList withPinnedTasks 1`] = `
+exports[`Storyshots PureTaskList Pinned Tasks 1`] = `
 <section
   class="storybook-snapshot-container"
 >
@@ -888,7 +638,257 @@ exports[`Storyshots PureTaskList withPinnedTasks 1`] = `
 </section>
 `;
 
-exports[`Storyshots Task archived 1`] = `
+exports[`Storyshots PureTaskList Standard 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+   
+   
+  <div
+    class="list-item Task_INBOX"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        disabled=""
+        name="checked"
+        type="checkbox"
+      />
+       
+      <span
+        class="checkbox-custom"
+      />
+    </label>
+     
+    <div
+      class="title"
+    >
+      <input
+        placeholder="Input title"
+        readonly=""
+        style="text-overflow: ellipsis;"
+        type="text"
+      />
+    </div>
+     
+    <div
+      class="actions"
+    >
+      <a
+        href="/"
+      >
+        <span
+          class="icon-star"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    class="list-item Task_INBOX"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        disabled=""
+        name="checked"
+        type="checkbox"
+      />
+       
+      <span
+        class="checkbox-custom"
+      />
+    </label>
+     
+    <div
+      class="title"
+    >
+      <input
+        placeholder="Input title"
+        readonly=""
+        style="text-overflow: ellipsis;"
+        type="text"
+      />
+    </div>
+     
+    <div
+      class="actions"
+    >
+      <a
+        href="/"
+      >
+        <span
+          class="icon-star"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    class="list-item Task_INBOX"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        disabled=""
+        name="checked"
+        type="checkbox"
+      />
+       
+      <span
+        class="checkbox-custom"
+      />
+    </label>
+     
+    <div
+      class="title"
+    >
+      <input
+        placeholder="Input title"
+        readonly=""
+        style="text-overflow: ellipsis;"
+        type="text"
+      />
+    </div>
+     
+    <div
+      class="actions"
+    >
+      <a
+        href="/"
+      >
+        <span
+          class="icon-star"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    class="list-item Task_INBOX"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        disabled=""
+        name="checked"
+        type="checkbox"
+      />
+       
+      <span
+        class="checkbox-custom"
+      />
+    </label>
+     
+    <div
+      class="title"
+    >
+      <input
+        placeholder="Input title"
+        readonly=""
+        style="text-overflow: ellipsis;"
+        type="text"
+      />
+    </div>
+     
+    <div
+      class="actions"
+    >
+      <a
+        href="/"
+      >
+        <span
+          class="icon-star"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    class="list-item Task_INBOX"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        disabled=""
+        name="checked"
+        type="checkbox"
+      />
+       
+      <span
+        class="checkbox-custom"
+      />
+    </label>
+     
+    <div
+      class="title"
+    >
+      <input
+        placeholder="Input title"
+        readonly=""
+        style="text-overflow: ellipsis;"
+        type="text"
+      />
+    </div>
+     
+    <div
+      class="actions"
+    >
+      <a
+        href="/"
+      >
+        <span
+          class="icon-star"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    class="list-item Task_INBOX"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        disabled=""
+        name="checked"
+        type="checkbox"
+      />
+       
+      <span
+        class="checkbox-custom"
+      />
+    </label>
+     
+    <div
+      class="title"
+    >
+      <input
+        placeholder="Input title"
+        readonly=""
+        style="text-overflow: ellipsis;"
+        type="text"
+      />
+    </div>
+     
+    <div
+      class="actions"
+    >
+      <a
+        href="/"
+      >
+        <span
+          class="icon-star"
+        />
+      </a>
+    </div>
+  </div>
+  
+</section>
+`;
+
+exports[`Storyshots Task Archived 1`] = `
 <section
   class="storybook-snapshot-container"
 >
@@ -927,7 +927,7 @@ exports[`Storyshots Task archived 1`] = `
 </section>
 `;
 
-exports[`Storyshots Task default 1`] = `
+exports[`Storyshots Task Long Title 1`] = `
 <section
   class="storybook-snapshot-container"
 >
@@ -974,59 +974,59 @@ exports[`Storyshots Task default 1`] = `
 </section>
 `;
 
-exports[`Storyshots Task longTitle 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <div
-    class="list-item Task_INBOX"
-  >
-    <label
-      class="checkbox"
-    >
-      <input
-        disabled=""
-        name="checked"
-        type="checkbox"
-      />
-       
-      <span
-        class="checkbox-custom"
-      />
-    </label>
-     
-    <div
-      class="title"
-    >
-      <input
-        placeholder="Input title"
-        readonly=""
-        style="text-overflow: ellipsis;"
-        type="text"
-      />
-    </div>
-     
-    <div
-      class="actions"
-    >
-      <a
-        href="/"
-      >
-        <span
-          class="icon-star"
-        />
-      </a>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`Storyshots Task pinned 1`] = `
+exports[`Storyshots Task Pinned 1`] = `
 <section
   class="storybook-snapshot-container"
 >
   <div
     class="list-item TASK_PINNED"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        disabled=""
+        name="checked"
+        type="checkbox"
+      />
+       
+      <span
+        class="checkbox-custom"
+      />
+    </label>
+     
+    <div
+      class="title"
+    >
+      <input
+        placeholder="Input title"
+        readonly=""
+        style="text-overflow: ellipsis;"
+        type="text"
+      />
+    </div>
+     
+    <div
+      class="actions"
+    >
+      <a
+        href="/"
+      >
+        <span
+          class="icon-star"
+        />
+      </a>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Storyshots Task Standard 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <div
+    class="list-item Task_INBOX"
   >
     <label
       class="checkbox"
