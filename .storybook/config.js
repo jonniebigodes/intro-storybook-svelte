@@ -17,7 +17,7 @@ function loadStories() {
 configure(loadStories, module) */
 
 // simple component jest and storyshots
-import { configure } from '@storybook/svelte';
+/* import { configure } from '@storybook/svelte';
 
 import '../src/index.css';
 import requireContext from 'require-context.macro';
@@ -27,4 +27,13 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
-configure(loadStories, module)
+configure(loadStories, module) */
+
+
+// configuration for csf
+import { configure } from '@storybook/svelte';
+import '../src/index.css';
+
+const req = require.context('../src/components', true, /\.stories\.js$/);
+
+configure(req, module) 

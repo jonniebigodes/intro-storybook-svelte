@@ -1,3 +1,5 @@
+//#region old format
+
 /* import { storiesOf, addDecorator } from "@storybook/svelte";
 
 import TaskList from "./TaskList.svelte";
@@ -123,3 +125,8 @@ storiesOf("PureTaskList", module)
       }
     };
   });
+//#endregion
+
+//#region csf
+
+//#endregion

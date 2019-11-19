@@ -1,9 +1,14 @@
 {
-    "plugins": [
+    /* "plugins": [
         "macros"
-    ],
+    ], */
     "presets": [
         "@babel/preset-env",
         "@babel/preset-react"
-    ]
+    ],
+    "env": {
+        "test": {
+          "plugins": ["require-context-hook"]
+        }
+      }
 }

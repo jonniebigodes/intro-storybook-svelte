@@ -1,7 +1,7 @@
-import { storiesOf } from '@storybook/svelte';
 import InboxScreen from './InboxScreen.svelte';
-
-//#region old_format
+//#region old format
+/*import { storiesOf } from '@storybook/svelte';
+ 
 storiesOf('PureInboxScreen',module)
 .add('default',()=>{
     return{
@@ -15,5 +15,22 @@ storiesOf('PureInboxScreen',module)
             error:true
         }
     }
-});
+}); */
 //#endregion
+
+//#region csf
+export default {
+    title:'PureInboxScreen',
+}
+export const standard=()=>({
+    Component:InboxScreen,
+})
+
+export const error=()=>({
+    Component:InboxScreen,
+    props:{
+        error:true
+    }
+})
+//#endregion
+

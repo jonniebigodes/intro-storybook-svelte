@@ -1,6 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots PureInboxScreen default 1`] = `
+exports[`Storyshots PureInboxScreen Error 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <div>
+    <div
+      class="page lists-show"
+    >
+      <div
+        class="wrapper-message"
+      >
+        <span
+          class="icon-face-sad"
+        />
+         
+        <div
+          class="title-message"
+        >
+          Oh no!
+        </div>
+         
+        <div
+          class="subtitle-message"
+        >
+          Something went wrong
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Storyshots PureInboxScreen Standard 1`] = `
 <section
   class="storybook-snapshot-container"
 >
@@ -184,38 +216,6 @@ exports[`Storyshots PureInboxScreen default 1`] = `
           </div>
         </div>
         
-      </div>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`Storyshots PureInboxScreen error 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <div>
-    <div
-      class="page lists-show"
-    >
-      <div
-        class="wrapper-message"
-      >
-        <span
-          class="icon-face-sad"
-        />
-         
-        <div
-          class="title-message"
-        >
-          Oh no!
-        </div>
-         
-        <div
-          class="subtitle-message"
-        >
-          Something went wrong
-        </div>
       </div>
     </div>
   </div>
