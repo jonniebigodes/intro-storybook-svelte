@@ -287,13 +287,14 @@ storiesOf("Task", module)
 //#endregion
 
 //#region csf
+import { action } from '@storybook/addon-actions';
 import Task from "./Task.svelte";
-import { actions, task } from "./storybook-helper";
 import { withKnobs, object } from "@storybook/addon-knobs";
 export default {
   title: "Task",
   //knobs code
   decorators: [withKnobs],
+  excludeStories: /.*Data$/,
   //
   // create addons code
   parameters:{
@@ -306,47 +307,59 @@ export default {
   //
 };
 
+export const taskData = {
+  id: "1",
+  title: "Test Task",
+  state: "Task_INBOX",
+  updated_at: new Date(2019, 0, 1, 9, 0)
+};
+
+export const actionsData = {
+  onPinTask: action("onPinTask"),
+  onArchiveTask: action("onArchiveTask")
+};
+
 const reallylongTitle = `This task's name is absurdly large. In fact, I think if I keep going I might end up with content overflow. What will happen? The star that represents a pinned task could have text overlapping. The text could cut-off abruptly when it reaches the star. I hope not`;
-export const standard = () => ({
+export const Default = () => ({
   Component: Task,
   props: {
     //task initial
-    task: object("task", { ...task }) // knobs addon
+    task: object("task", { ...taskData }) // knobs addon
   },
   on: {
-    ...actions
+    ...actionsData
   }
 });
-export const pinned = () => ({
+export const Pinned = () => ({
   Component: Task,
   props: {
     task: {
-      ...task,
+      ...taskData,
       state: "TASK_PINNED"
     }
   },
   on: {
-    ...actions
+    ...actionsData
   }
 });
-export const archived = () => ({
+export const Archived = () => ({
   Component: Task,
   props: {
     task: {
-      ...task,
+      ...taskData,
       state: "TASK_ARCHIVED"
     }
   },
   on: {
-    ...actions
+    ...actionsData
   }
 });
 //
-export const longTitle = () => ({
+export const LongTitle = () => ({
   Component: Task,
   props: {
     task: {
-      ...task,
+      ...taskData,
       title: reallylongTitle
     }
   }
