@@ -17,8 +17,12 @@ describe("TaskList", () => {
 
 // update code for data section
 import PureTaskList from "./PureTaskList.svelte";
-import {render} from '@testing-library/svelte';
-import { withPinnedTasks } from './storybook-helper'
+import {
+  render
+} from '@testing-library/svelte';
+import {
+  withPinnedTasksData
+} from './PureTaskList.stories'
 
 /* describe("TaskList",()=>{
     it('renders pinned tasks at the start of the list',()=>{
@@ -34,9 +38,11 @@ import { withPinnedTasks } from './storybook-helper'
 }) */
 
 test("TaskList ", async () => {
-  const { container } = await render(PureTaskList, {
+  const {
+    container
+  } = await render(PureTaskList, {
     props: {
-      tasks: withPinnedTasks
+      tasks: withPinnedTasksData
     }
   });
   expect(container.firstChild.children[0].classList.contains('TASK_PINNED')).toBe(true);
