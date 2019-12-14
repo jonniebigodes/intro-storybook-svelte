@@ -40,7 +40,7 @@
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -c .storybook -s public -o storybook-static",
+    "build-storybook": "build-storybook -s public",
     "test": "jest --watchAll",
     "clear_jest": "jest --clearCache",
     "jest-without-cache": "jest --no-cache"
